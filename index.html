@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
-    
-    <!-- Link to your external CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <title>Test Page</title>
 </head>
 <body>
 
-    <!-- Your visible content goes here -->
     <h1>Hello, World!</h1>
-    <button id = "myButton">Click Me</button>
-    <p id = "message">Hello</p>
-    <!-- Link to your external JavaScript file (loaded at the end for speed) -->
-    <script
-        
+    <button id="myButton">Click Me</button>
+    <p id="message">Hello</p>
+
+    <!-- Make sure there is NO 'src' attribute inside this opening tag -->
+    <script>
         document.getElementById("myButton").addEventListener("click", function() {
-            document .getElementById("message").textContent = "You clicked the button";
+            document.getElementById("message").textContent = "You clicked the button";
         });
-     </script>
+    </script>
 </body>
 </html>
