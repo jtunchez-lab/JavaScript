@@ -10,7 +10,7 @@
     <h1>Hello, World!</h1>
     <button id="ClickButton">Increase</button>
     <button id = "DecreaseButton">Decrease</button>
-    <p id="ScoreText"></p>
+    <p id="ScoreText">0</p>
     
    
     <script>
@@ -18,7 +18,7 @@
         
         document.getElementById("ClickButton").addEventListener("click", function() {
             Score = Score +1;
-            document.getElementById("ScoreText).textContent = Score;
+            document.getElementById("ScoreText").textContent = Score;
         });
          document.getElementById("DecreaseButton").addEventListener("click", function() {
              Score = Score-1
