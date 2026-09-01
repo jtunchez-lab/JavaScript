@@ -8,20 +8,23 @@
 <body>
 
     <h1>Hello, World!</h1>
-    <button id="myButton">Click Me</button>
-    <p id="message">Hello</p>
-
+    <button id="ClickButton">Increase</button>
+    <button id = "DecreaseButton">Decrease</button>
+    <p id="ScoreText"></p>
+    
    
     <script>
-        document.getElementById("myButton").addEventListener("click", function() {
-            document.getElementById("message").textContent = "You clicked the button";
+        let Score = 0;
+        
+        document.getElementById("ClickButton").addEventListener("click", function() {
+            Score = Score +1;
+            document.getElementById("ScoreText).textContent = Score;
         });
-         document.getElementById("myButton").addEventListener("mouseover", function() {
-            document.getElementById("myButton").textContent = "Currently Being Hovered";
+         document.getElementById("DecreaseButton").addEventListener("click", function() {
+             Score = Score-1
+            document.getElementById("ScoreText").textContent =Score ;
         });
-        document.getElementById("myButton").addEventListener("mouseout", function() {
-            document.getElementById("myButton").textContent = "Click Me";
-        });
+       
     </script>
 </body>
 </html>
