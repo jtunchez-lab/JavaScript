@@ -11,11 +11,17 @@
     <button id="ClickButton">Increase</button>
     <button id = "DecreaseButton">Decrease</button>
     <button id = "Reset">Reset</button>
+    
     <p id="ScoreText">0</p>
     
-   
+    <section>
+        <button id = "ReRollButton">ReRoll Animal</button>
+        <p id ="AnimalText"></p>
+        
+    </section>
     <script>
         let Score = 0;
+        let Animals = ["Panda", "Polar Bear", "Whale","Wolverine"];
         
         document.getElementById("ClickButton").addEventListener("click", function() {
             Score = Score +1;
@@ -28,6 +34,13 @@
         document.getElementById("Reset").addEventListener("click", function() {
              Score = 0
             document.getElementById("ScoreText").textContent =Score ;
+        });
+
+        document.getElementById("ReRollButton").addEventListener("click", function() {
+             let RandomNumber = Math.floor(Math.random()* Animals.length);
+             let RandomAnimal = Animals[RandomNumber];
+                
+            document.getElementById("AnimalText").textContent =RandomAnimal;
         });
        
     </script>
