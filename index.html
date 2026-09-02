@@ -39,8 +39,14 @@
         document.getElementById("ReRollButton").addEventListener("click", function() {
              let RandomNumber = Math.floor(Math.random()* Animals.length);
              let RandomAnimal = Animals[RandomNumber];
-                
-            document.getElementById("AnimalText").textContent =RandomAnimal;
+                if (RandomAnimal === "Panda") {
+                 document.getElementById("AnimalText").textContent = RandomAnimal + "(My Favorite Animal)" ;
+                } else {
+                document.getElementById("AnimalText").textContent =RandomAnimal;
+                    
+                }
+            
+            
         });
        
     </script>
